@@ -205,6 +205,49 @@
 
 
 }
+.category {
+  padding: 120px 0 120px 0;
+  &__title{
+    font-size: 40px;
+    line-height: 40px;
+    @extend %prata;
+    margin-bottom: 40px;
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 200px;
+    height: 259px;
+    background-color: $bg;
+    margin-right: 20px;
+    transition: all .3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    img{
+      margin: 0 auto;
+      padding-top: 37px;
+      vertical-align: bottom;
+      height: 147px;
+
+    }
+
+  }
+  &__subtitle{
+    text-align: center;
+    margin-top: 55px;
+    padding-bottom: 25px ;
+    font-size: 16px;
+    line-height: 16px;
+
+  }
+}
 
 
 @import 'media';
