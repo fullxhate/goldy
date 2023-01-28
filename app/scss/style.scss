@@ -260,6 +260,7 @@
   &__filter{
     display: flex;
     align-items: center;
+    position: relative;
   }
   &__filter_btn{
     padding: 13px 30px ;
@@ -273,17 +274,15 @@
       margin-right: 0;
     }
   }
-  &__items{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
+  //&__items{
+  //  display: flex;
+  //  align-items: center;
+  //  gap: 20px;
+  //}
   &__item{
     margin-top: 25px;
     padding: 24px;
     border: 1px solid #f0f0f0;
-    width: 310px;
-    height: 370px;
     img{
       margin: 0 auto;
     }
@@ -294,11 +293,74 @@
     align-items: flex-end;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    span{
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 4px 12px;
+      background: #5B8A8F;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 13px;
+      line-height: 13px;
+    }
 
   }
+
+
   svg:hover > path {
     fill: #979797;
   }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 15px;
+    span{
+      position: absolute;
+      right: 0;
+      font-weight: 500;
+      font-size: 13px;
+      color: #fff;
+      background: #E24B33;
+      border-radius: 15px;
+      padding: 4px 8px;
+    }
+  }
+  &__price-before{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  &__price-after{
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration-line: line-through;
+    color: $text2;
+  }
+  &__item-subtitle{
+    font-size: 14px;
+    line-height: 160%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: none;
+  }
+  &__slide-btn{
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    right: 0;
+  }
+  .swiper-button-disabled .sale-button-prev{
+    opacity: .35;
+  }
+.sale__item .swiper-slide .swiper-slide-active{
+  width: 250px;
+}
+
+
 
 
 }
